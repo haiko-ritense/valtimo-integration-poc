@@ -1,5 +1,5 @@
 fun configureEnvironment(task: ProcessForkOptions) {
-    val f = File("${rootProject.projectDir}/.env.properties")
+    val f = File("${rootProject.projectDir}/backend/.env.properties")
     if (f.isFile) {
         f.readLines().forEachIndexed { index, line ->
             if (line.isNotEmpty() && !line.startsWith("#")) {
